@@ -1,0 +1,61 @@
+{
+  "name": "standups.online",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@types/bcryptjs": "^2.4.2",
+    "@types/date-fns": "^2.6.0",
+    "@types/dotenv": "^8.2.0",
+    "@types/faker": "^4.1.12",
+    "@types/jsonwebtoken": "^8.5.0",
+    "@types/koa": "^2.11.3",
+    "@types/koa-bodyparser": "^4.3.0",
+    "@types/koa-router": "^7.4.1",
+    "@types/module-alias": "^2.0.0",
+    "@types/mongoose": "^5.7.21",
+    "@types/mustache": "^4.0.1",
+    "@types/nodemailer": "^6.4.0",
+    "@types/randomstring": "^1.1.6",
+    "@types/supertest": "^2.0.9",
+    "ava": "^3.8.2",
+    "bcryptjs": "^2.4.3",
+    "date-fns": "^2.14.0",
+    "dotenv": "^8.2.0",
+    "faker": "^4.1.0",
+    "indicative": "^7.4.4",
+    "jsonwebtoken": "^8.5.1",
+    "koa": "^2.12.0",
+    "koa-bodyparser": "^4.3.0",
+    "koa-router": "^8.0.8",
+    "module-alias": "^2.2.2",
+    "mongoose": "^5.9.15",
+    "mustache": "^4.0.1",
+    "nodemailer": "^6.4.6",
+    "nodemon": "^2.0.4",
+    "randomstring": "^1.1.5",
+    "supertest": "^4.0.2",
+    "ts-node": "^8.10.1",
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "^3.9.3"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "ava",
+    "start": "node -r module-alias/register build/index.js",
+    "dev": "nodemon -r tsconfig-paths/register src/index.ts"
+  },
+  "_moduleAliases": {
+    "@": "build/"
+  },
+  "ava": {
+    "extensions": [
+      "ts"
+    ],
+    "verbose": true,
+    "require": [
+      "ts-node/register",
+      "tsconfig-paths/register"
+    ]
+  }
+}
